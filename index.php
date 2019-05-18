@@ -1,43 +1,28 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <!--
-      endless.horse
-      Colleen Josephson and Kyle Miller, 2015
-      Created during the West Coast Stupid Shit No One Needs & Terrible Ideas Hackathon
-  -->
-  <head>
-    <meta name="hooooooooooooooooooooooooooooooooooooooooooooooooooooooooorse"
-    http-equiv="Content-Type" content="text/html; charset=UTF-8;
-    Author: Colleen Josephson" />
-    <title>hooooooooooooooooooooooooooooooooooooooooooooooooooooooooorse</title>
-    <link rel="shortcut icon" href="favicon.png" />
-    <meta name=viewport content="width=device-width, initial-scale=1">
-
-    <script src="../cdn/jquery.js"></script>
-    <script src="../cdn/jquery.jscroll.js"></script>
-    <style type="text/css">
-      pre { margin: 0; }
-      .centered { width: 380px; margin: 0 auto 0 auto; }
-      h1 { text-align: center; }
-    </style>
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.jscroll.min.js"></script>
     <script type="text/javascript">
-      $(function () {
+    $(function () {
         $('#horse').jscroll({
-          padding: 2000,
-          loadingHtml: ''
+            loadingHtml: '<img src="loading.gif" alt="Loading" /> Loading...',
+            padding: 20,
+            nextSelector: '.next:last',
+            // contentSelector: 'li'
         });
-      });
+    });
     </script>
-  </head>
-  <body>
-<div id="horse" class="centered" style="padding-top: 222px">
-        <pre>
-link1
-</pre>
-<a href="legs.html"></a>
-</div>
-  </body>
+</head>
+<body>
+    <div id="horse" class="centered">
+        <div id="links">
+            <li>old</li>
+        </div>
+        <a class="next" href="server.php?id=1"></a>
+    </div>
+</body>
 </html>
-
-
