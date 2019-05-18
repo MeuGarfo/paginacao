@@ -8,21 +8,29 @@
     <script src="js/jquery.jscroll.min.js"></script>
     <script type="text/javascript">
     $(function () {
-        $('#horse').jscroll({
-            loadingHtml: '<img src="loading.gif" alt="Loading" /> Loading...',
+        $('#links tbody tr').jscroll({
+            loadingHtml: '<img src="img/loading.png" alt="Loading" />',
             padding: 20,
-            nextSelector: '.next:last',
-            // contentSelector: 'li'
+            nextSelector: 'a.next:last',
+            contentSelector: 'tr'
         });
     });
     </script>
 </head>
 <body>
-    <div id="horse" class="centered">
-        <div id="links">
-            <li>old</li>
-        </div>
-        <a class="next" href="server.php?id=1"></a>
-    </div>
+    <table id="links" class="table table-striped" style="width:100%">
+        <tbody>
+            <tr>
+                <td>
+                    <a href="#">Link 1</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="next" href="server.php?id=1"></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
